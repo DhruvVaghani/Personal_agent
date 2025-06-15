@@ -1,4 +1,4 @@
-# **Your Personal Aget at Work**
+# **Your Personal Agent at Work**
 ### **📌 Project Description**
 Personal Agent is a fully interactive, AI-powered assistant that answers questions about an individual by intelligently synthesizing data from their GitHub, LinkedIn, Medium, and resume. Built using **LangChain, LangGraph, Agno, Supabase and Streamlit**, this app enables users to gain holistic insights into a person's professional and personal background in a conversational format.
 
