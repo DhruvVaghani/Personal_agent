@@ -48,7 +48,7 @@ from agno.agent import Agent
 from agno.tools.github import GithubTools
 import os
 
-def query_github_agent(query: str, github_profile: str, openai_api_key: str):
+def query_github_agent(query: str, github_profile: str, openai_api_key: str, github_token: str):
     """
     Query GitHub agent with user-provided OpenAI API key
     
