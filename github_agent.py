@@ -2,7 +2,7 @@
 # from agno.agent import Agent
 # from agno.tools.github import GithubTools
 
-# def query_github_agent(query: str, github_profile: str):
+# def query_github_agent(query: str, github_profile: str, github_token: str):
 #     # Create the GitHub tools with safe read-only access
 #     github_tools = GithubTools(
 #         search_repositories=True,      # Search for repositories
