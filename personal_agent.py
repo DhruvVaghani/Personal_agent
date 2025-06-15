@@ -177,7 +177,7 @@ def github_node(state: AgentState) -> AgentState:
     github_response = query_github_agent(user_query, st.session_state.github_profile)
     return {
         **state,
-        "github_response": str(github_response.content)
+        "github_response": str(github_response)
     }
 
 def medium_node(state: AgentState) -> AgentState:
