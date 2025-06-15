@@ -185,7 +185,11 @@ initial_state: AgentState = {
 
 def github_node(state: AgentState) -> AgentState:
     user_query = state["input"]
-    github_response = query_github_agent(user_query, st.session_state.github_profile)
+    github_response = query_github_agent(
+        user_query, 
+        st.session_state.github_profile,
+        st.session_state.openai_api_key  # Pass the user's API key
+    )
     return {
         **state,
         "github_response": str(github_response)
