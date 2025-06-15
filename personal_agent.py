@@ -71,9 +71,21 @@ if st.session_state.user:
 
 st.sidebar.title("🔐 API Keys")
 
-st.session_state.openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
-st.session_state.firecrawl_api_key = st.sidebar.text_input("Firecrawl API Key", type="password")
-st.session_state.proxycurl_api_key = st.sidebar.text_input("Proxycurl API Key", type="password")
+if "openai_api_key" not in st.session_state:
+    st.session_state.openai_api_key = ""
+
+st.session_state.openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password", value=st.session_state.openai_api_key)
+
+if "firecrawl_api_key" not in st.session_state:
+    st.session_state.firecrawl_api_key = ""
+
+st.session_state.firecrawl_api_key = st.sidebar.text_input("Firecrawl API Key", type="password", value=st.session_state.firecrawl_api_key)
+
+if "proxycurl_api_key" not in st.session_state:
+    st.session_state.proxycurl_api_key = ""
+
+st.session_state.proxycurl_api_key = st.sidebar.text_input("Proxycurl API Key", type="password", value=st.session_state.proxycurl_api_key)
+
 with st.sidebar:
     st.markdown("----")
     st.markdown("👨‍💻 Built by **Dhruv Vaghani**")
