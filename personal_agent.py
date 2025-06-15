@@ -137,8 +137,7 @@ if not all([
 
 
 
-# Initialize LLM with OpenAI key
-llm = ChatOpenAI(model="gpt-4o", api_key=st.session_state.openai_api_key)
+
 
 
 # if user_api_key:
@@ -204,6 +203,12 @@ def final_response_node(state: AgentState) -> AgentState:
     user_query = state["input"]
     chat_history = state.get("chat_history", [])
 
+    if st.session_state.openai_api_key:
+        llm = ChatOpenAI(model="gpt-4o", api_key=st.session_state.openai_api_key)
+    else:
+        st.warning("Please enter your OpenAI API Key in the sidebar to continue.")
+        st.stop()
+    
     github_summary = state.get("github_response", "")
     medium_summary = state.get("medium_response", "")
     linkedin_summary = state.get("linkedin_response", "")
